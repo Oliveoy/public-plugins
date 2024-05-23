@@ -2,9 +2,14 @@ package com.lucidplugins.exampleplugin;
 
 import com.google.inject.Provides;
 import net.runelite.api.*;
+import net.runelite.api.coords.WorldPoint;
+import net.runelite.api.events.GameTick;
 import net.runelite.client.config.ConfigManager;
+import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.unethicalite.api.entities.Players;
+import net.unethicalite.api.movement.pathfinder.Walker;
 import net.unethicalite.api.utils.MessageUtils;
 import org.pf4j.Extension;
 import javax.inject.Inject;
@@ -49,5 +54,13 @@ public class LucidExamplePlugin extends Plugin
     protected void shutDown()
     {
         log.info(getName() + " Stopped");
+    }
+
+    @Subscribe
+    private void onGameTick(final GameTick event)
+    {
+        WorldPoint worldLocation = Players.getLocal().getWorldLocation();
+        worldLocation.dx(1);
+        Walker.walkTo(worldLocation);
     }
 }
