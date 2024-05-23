@@ -6,7 +6,7 @@
   "id": "lucidexample-plugin",
   "releases": [{
     "date": "2024-05-19",
-    "sha512sum": "12A099315651BE9B1A27007DD744B7932AAC6B862FEC34E7E98DCE1FACCA3399660A680ECB78834C351EC7CC694B07F381C208A390B7343070C696C02E86BAF5",
+    "sha512sum": "A99BEE8E037D2BD55D8841C426C91F7F437EB96DB3C622A5244074BD50BD034ADEAF666ACE65184DC110594900B0057637480529139FC44DFCB4C83F4C75BC8F",
     "version": "1.0.1",
     "url": "https://github.com/lucid-plugins/public-plugins/blob/master/release/lucid-example-plugin-1.0.1.jar?raw=true",
     "requires": "^1.0.0"
